@@ -3,13 +3,17 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-    <title>Unity Web Player | NOVENOA</title>
+    <title>Unity Web Player | Myproject</title>
     <link rel="shortcut icon" href="TemplateData/favicon.ico">
     <link rel="stylesheet" href="TemplateData/style.css">
   </head>
   <body>
     <div id="unity-container" class="unity-desktop">
+<<<<<<< HEAD
       <canvas id="unity-canvas" width=930 height=620 tabindex="-1"></canvas>
+=======
+      <canvas id="unity-canvas" width=960 height=600 tabindex="-1"></canvas>
+>>>>>>> 0b1e675dc700ff66efba7d6bd54ad520faab2c5b
       <div id="unity-loading-bar">
         <div id="unity-logo"></div>
         <div id="unity-progress-bar-empty">
@@ -20,7 +24,7 @@
       <div id="unity-footer">
         <div id="unity-logo-title-footer"></div>
         <div id="unity-fullscreen-button"></div>
-        <div id="unity-build-title">NOVENOA</div>
+        <div id="unity-build-title">Myproject</div>
       </div>
     </div>
     <script>
@@ -52,15 +56,24 @@
       }
 
       var buildUrl = "Build";
+<<<<<<< HEAD
       var loaderUrl = buildUrl + "/futbol.loader.js";
       var config = {
         arguments: [],
         dataUrl: buildUrl + "/futbol.data",
         frameworkUrl: buildUrl + "/futbol.framework.js",
         codeUrl: buildUrl + "/futbol.wasm",
+=======
+      var loaderUrl = buildUrl + "/Futbol.loader.js";
+      var config = {
+        arguments: [],
+        dataUrl: buildUrl + "/Futbol.data",
+        frameworkUrl: buildUrl + "/Futbol.framework.js",
+        codeUrl: buildUrl + "/Futbol.wasm",
+>>>>>>> 0b1e675dc700ff66efba7d6bd54ad520faab2c5b
         streamingAssetsUrl: "StreamingAssets",
         companyName: "DefaultCompany",
-        productName: "NOVENOA",
+        productName: "Myproject",
         productVersion: "1.0",
         showBanner: unityShowBanner,
         // errorHandler: function(err, url, line) {
@@ -104,8 +117,13 @@
 
       } else {
         // Desktop style: Render the game canvas in a window that can be maximized to fullscreen:
+<<<<<<< HEAD
         canvas.style.width = "930px";
         canvas.style.height = "620px";
+=======
+        canvas.style.width = "960px";
+        canvas.style.height = "600px";
+>>>>>>> 0b1e675dc700ff66efba7d6bd54ad520faab2c5b
       }
 
       document.querySelector("#unity-loading-bar").style.display = "block";
