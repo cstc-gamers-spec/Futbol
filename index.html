@@ -88,27 +88,22 @@
       // expected to change.
 
       if (/iPhone|iPad|iPod|Android/i.test(navigator.userAgent)) {
-         // Configuración para móviles al 60% de la pantalla
-        var meta = document.createElement('meta');
-        meta.name = 'viewport';
-        meta.content = 'width=device-width, initial-scale=1.0, user-scalable=no, shrink-to-fit=yes';
-        document.getElementsByTagName('head')[0].appendChild(meta);
-        
-        // Asignamos el estilo directamente al canvas para ocupar el 60% manteniendo proporción 16:10
-        canvas.style.width = "60vw";
-        canvas.style.height = "calc(60vw * 600 / 960)";
-        canvas.style.margin = "0 auto";
-        canvas.style.display = "block";
+  var meta = document.createElement('meta');
+  meta.name = 'viewport';
+  meta.content = 'width=device-width, initial-scale=1.0, user-scalable=no, shrink-to-fit=yes';
+  document.getElementsByTagName('head')[0].appendChild(meta);
 
-        // To lower canvas resolution on mobile devices to gain some
-        // performance, uncomment the following line:
-        // config.devicePixelRatio = 1;
+  // Ventana más pequeña en móvil (35% del ancho, proporción 16:10)
+  canvas.style.width = "35vw";
+  canvas.style.height = "calc(35vw * 600 / 960)";
+  canvas.style.margin = "0 auto";
+  canvas.style.display = "block";
 
-      } else {
-        // Desktop style: Render the game canvas in a window that can be maximized to fullscreen:
-        canvas.style.width = "930px";
-        canvas.style.height = "620px";
-      }
+} else {
+  // Escritorio: ventana más pequeña (640x400 mantiene la proporción 16:10)
+  canvas.style.width = "540px";
+  canvas.style.height = "200px";
+}
 
       document.querySelector("#unity-loading-bar").style.display = "block";
 
